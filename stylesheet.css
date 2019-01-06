@@ -1,0 +1,1052 @@
+/* メニュー */
+*, *:before, *:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+body{
+	background-color:#f0fcff ;
+}
+
+.cp_cont {
+	height: 45vh;
+}
+
+.cp_offcm01 {
+	position: absolute;
+	top: 18px;
+	right: 5%;
+	display: inline-block;
+}
+
+.cp_offcm01 .cp_menu {
+	position: fixed;
+	top: 5px;
+	right: -100vw;
+	width: 120px;
+	height: 50%;
+	cursor: pointer;
+	-webkit-transition: 0.53s transform;
+	        transition: 0.53s transform;
+	-webkit-transition-timing-function: cubic-bezier(.38,.52,.23,.99);
+	        transition-timing-function: cubic-bezier(.38,.52,.23,.99);
+	background-color: #607D8B;
+	opacity: 0.8;
+}
+
+.cp_offcm01 .cp_menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.cp_offcm01 .cp_menu li {
+	list-style: none;
+  font-size: 13px;
+}
+
+.cp_offcm01 .cp_menu li a {
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color: #ffffff;
+	border-bottom: 1px solid #ffffff;
+}
+
+.cp_offcm01 #cp_toggle01 {
+	position: absolute;
+	display: none;
+	opacity: 0;
+}
+
+.cp_offcm01 #cp_toggle01:checked ~ .cp_menu {
+	-webkit-transform: translateX(-100vw);
+	        transform: translateX(-100vw);
+  height: 125px;
+  z-index: 10;
+}
+
+/* menu toggle */
+.cp_offcm01 #cp_toggle01 ~ label {
+	display: block;
+	margin-right: 5px;
+	cursor: pointer;
+	-webkit-transition: 0.5s transform;
+	        transition: 0.5s transform;
+	-webkit-transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+	        transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+	text-align: center;
+	color: #333333;
+}
+
+.cp_offcm01 #cp_toggle01:checked ~ label {
+	-webkit-transform: translateX(-90px);
+	        transform: translateX(-90px);
+}
+
+.cp_offcm01 #cp_toggle01 ~ label::before {
+	font-family: 'FontAwesome';
+	content: '\f0c9';
+	font-size: 40px;
+}
+
+.cp_offcm01 #cp_toggle01:checked ~ label::before {
+	content: '\f00d';
+  font-size: 20px;
+  margin-right: 70%;
+}
+
+/* contents */
+.cp_contents {
+	color: #333333;
+}
+
+.header_logo{
+  text-align: center;
+  text-shadow: 0px 0px 0 rgb(239,239,239),
+             -1px 1px 0 rgb(233,233,233),
+             -2px 2px 0 rgb(228,228,228),
+             -3px 3px 0 rgb(222,222,222),
+             -4px 4px 0 rgb(216,216,216),
+             -5px 5px 0 rgb(210,210,210),
+             -6px 6px 0 rgb(204,204,204),
+             -7px 7px 0 rgb(198,198,198),
+             -8px 8px 0 rgb(193,193,193),
+             -9px 9px 0 rgb(187,187,187),
+             0px 0px 18px rgba(0,0,0,.2);
+}
+
+.page_top{
+  border-bottom: solid;
+  width: 90%;
+	padding-bottom: 3px;
+  border-bottom-width: 1px;
+  margin-left: 5%;
+  margin-bottom: 10px;
+}
+.page_top1{
+  border-bottom: solid;
+  width: 80%;
+  border-bottom-width: 1px;
+  margin-left: 10%;
+}
+
+.cp_contents{
+	width: 100%;
+  margin: 0 auto;
+}
+/* トップ画面 */
+.mycourse{
+	width: 92%;
+	margin: 0 auto;
+  font-size: 30px;
+	margin-top: 10px;
+  margin-bottom: 20px;
+	background: #dfefff;
+	box-shadow: 0px 0px 0px 5px #dfefff;
+	border: dashed 2px white;
+	padding: 0.2em 0.5em;
+	padding-bottom: 10px;
+	color: #454545;
+}
+
+.mycourse:after{
+	position: absolute;
+	content: '';
+	left: -7px;
+	top: -7px;
+	margin-left: 4%;
+	margin-top: 10px;
+	border-width: 0 0 15px 15px;
+	border-style: solid;
+	border-color: #fff #fff #a8d4ff;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.login_top{
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.login_form{
+  padding: 10px;
+  text-align: center;
+}
+
+.login{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.3125;
+  border-radius: 80px;
+  background-color: rgb(230, 236, 240);
+  padding: 5px;
+  margin: 6px auto;
+  width: 70%;
+}
+
+.login_submit{
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 70%;
+  padding: 5px;
+  margin: 6px auto;
+  background-color: rgb(29, 161, 242);
+}
+
+.new_account{
+  margin-right: 17%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+	color: rgb(29, 161, 242);
+  font-size: 10px;
+	float: right;
+}
+
+.errors{
+  font-size: 10px;
+  color: red;
+  text-align: center;
+}
+
+.not_login_top{
+  font-size: 15px;
+  margin-left: 40px;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+.not_login{
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.header_top{
+  font-size: 15px;
+  color: black;
+  margin-left: 20px;
+}
+
+.registration_mail_top{
+	font-size: 20px;
+	margin-left: 10%;
+  margin-bottom: 10px;
+}
+
+.mail_form {
+	position: relative;
+	width: 80%;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 15px;
+}
+
+.mail_form input[type='text'] {
+	font: 15px/30px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding-left: 35px;
+	letter-spacing: 1px;
+	border: 0;
+}
+
+.mail_form input[type='text']:focus {
+	outline: none;
+}
+
+.mail_form input[type='text']:focus::after {
+	outline: none;
+}
+
+.mail_form i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 8px 8px;
+	transition: 0.3s;
+	color: #aaaaaa;
+}
+
+.mail_form::after {
+	display: block;
+	width: 100%;
+	height: 4px;
+	margin-top: -1px;
+	content: '';
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: #da3c41;
+}
+
+.registration_mail{
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.mail_url{
+  text-align: center;
+  font-size: 10px;
+  margin-top: 30px;
+}
+
+.next{
+  font-size: 10px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 14%;
+  padding: 4px;
+  margin-top: 5px;
+	margin-left: 76%;
+  background-color: rgb(29, 161, 242);
+}
+
+.next1{
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 20%;
+  padding: 10px;
+  margin: 30px 0 0 380px;
+  background-color: rgb(29, 161, 242);
+}
+
+.next2{
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 29%;
+  padding: 10px;
+  margin: 50px 0 0 670px;
+  background-color: rgb(29, 161, 242);
+}
+
+.top{
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 10%;
+  padding: 10px;
+  margin: 0 0 0 10px;
+  background-color: rgb(29, 161, 242);
+}
+
+.registration_top{
+	font-size: 20px;
+	margin-left: 10%;
+  margin-bottom: 10px;
+}
+
+.mail_check{
+  font-size: 15px;
+  text-align: center;
+  width: 80%;
+	margin-top: 50px;
+  margin-left: 50px;
+}
+
+.registration_form {
+	position: relative;
+	width: 80%;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 15px;
+}
+
+.registration_form input[type='text'] {
+	font: 15px/30px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding-left: 35px;
+	letter-spacing: 1px;
+	border: 0;
+}
+
+.registration_form input[type='text']:focus {
+	outline: none;
+}
+
+.registration_form input[type='text']:focus::after {
+	outline: none;
+}
+
+.registration_form i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 8px 8px;
+	transition: 0.3s;
+	color: #aaaaaa;
+}
+
+.registration_form::after {
+	display: block;
+	width: 100%;
+	height: 4px;
+	margin-top: -1px;
+	content: '';
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: #da3c41;
+}
+
+.registration_comfirm_top{
+	font-size: 20px;
+	margin-left: 10%;
+	margin-bottom: 10px;
+}
+
+.registration_insert{
+  font-size: 20px;
+	width: 80%;
+	margin: 10px auto;
+  text-align: center;
+}
+
+
+.items{
+	border-style: solid;
+	border-width: 1px;
+  font-size: 12px;
+  width: 90%;
+	margin: 0 auto;
+}
+
+.item1{
+  background-color: #e5f6ff;
+  text-align: right;
+	width: 20%;
+}
+
+.item{
+  background-color: #e5f6ff;
+  border-top-style:dotted;
+	border-width: 1px;
+  padding-left: 0px;
+  text-align: right;
+}
+
+.item_value{
+  border-top-style:dotted;
+	font-size: 5px;
+	border-width: 1px;
+}
+
+.item_form{
+  font-size: 10px;
+	margin: auto 0 ;
+}
+
+.course_search{
+	font-size: 10px;
+  font-weight: 400;
+  color: black;
+  border-radius: 80px;
+  width: 14%;
+  padding: 4px;
+  margin: 5px 0 0 81%;
+  background-color: rgb(29, 161, 242);
+}
+
+.course_search_top{
+	font-size: 20px;
+	margin-left: 5%;
+}
+
+.course_table_top{
+  margin-left: 5%;
+  font-size: 15px;
+}
+
+.course_table{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 10px;
+	margin-bottom: 2px;
+}
+
+.course_insert_btn{
+  width: 18%;
+  font-size: 50%;
+  border-radius: 80px;
+  text-align: center;
+  height: 20px;
+	margin-left: 77%;
+	margin-bottom: 4px;
+}
+
+.course_insert_btn1{
+  width: 20%;
+  font-size: 10px;
+  border-radius: 80px;
+  margin-top: 10px;
+  padding-left: 10px;
+  text-align: center;
+  height: 60px;
+  margin-left: 10%;
+}
+
+.courses_main{
+  padding-bottom: 30px;
+}
+
+.total_page{
+  margin-left: 5%;
+  font-size: 10px;
+}
+
+.page{
+  font-size: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.insert_check{
+  width: 6px;
+  height:	6px;
+  transform:	scale(1.4);
+  margin-left: 20%;
+}
+
+.course_check_tt{
+  width: 98%;
+  margin: 10px auto;
+  font-size: 8px;
+	font-weight: bold;
+}
+
+.tt_select_form{
+  font-size: 5px;
+}
+
+.form_display{
+  display: inline-block;
+}
+
+/* マイページ */
+.mypage{
+	font-size: 10px;
+	font-weight: 400;
+	color:black;
+	border-radius: 80px;
+	width: 24%;
+	padding: 4px;
+	margin: 0 0 0 74%;
+	background-color: rgb(29, 161, 242);
+}
+
+.tt{
+	text-align: center;
+	padding: 0 5%;
+	height: 600px;
+	font-size: 6px;
+}
+
+.table{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-top: auto;
+}
+
+.tt th{
+	font-size: 8px;
+	font-weight: bold;
+}
+
+.period_number{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.tr{
+	height: 5em;
+}
+
+.mypage_tt_name{
+  font-size: 25px;
+  display: inline-block;
+}
+
+.mypage_tt_select{
+  font-size: 10px;
+  width: 80px;
+  text-align: center;
+}
+
+.form{
+	display: inline-block;
+	margin-right: 1%;
+	float: right;
+}
+
+.form1{
+	display: inline-block;
+	margin-right: 5%;
+	float: right;
+	margin-top: 5px;
+}
+
+.mypage_tt_btn{
+  font-size: 10px;
+	margin-bottom: 5px;
+}
+
+.tt td{
+  height: 60px;
+}
+
+.center{
+  text-align: center;
+}
+
+.mypage_head{
+	border-bottom: dotted;
+	border-width: 1px;
+	width: 90%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right:  auto;
+	padding-bottom: 10px;
+}
+
+.mypage_edit1{
+	margin-left: 1%;
+  font-size: 10px;
+  font-weight: bold;
+}
+.mypage_edit2{
+	margin-left: 1%;
+  margin-top: 5px;
+  font-size: 10px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* アカウント編集 */
+.account_edit_top{
+	font-size: 20px;
+	margin-left: 10%;
+  margin-bottom: 10px;
+}
+
+.course_check_top{
+  font-size: 20px;
+  margin-left: 1%;
+}
+
+.course_insert_top{
+  font-size: 20px;
+  margin-left: 5%;
+  width: 90%;
+	border-width: 1px;
+  border-bottom: solid;
+}
+
+.course_check0{
+  font-size: 10px;
+  margin-left: 6%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.items0{
+  border-style: solid;
+  font-size: 12px;
+  width: 90%;
+}
+
+.item10{
+  background-color: #e5f6ff;
+  text-align: right;
+	width: 36%;
+}
+
+.item0{
+  background-color: #e5f6ff;
+  border-top-style:dotted;
+	border-width: 1px;
+  padding-left: 0px;
+  text-align: right;
+}
+
+.item_value0{
+  border-top-style:dotted;
+	border-width: 1px;
+}
+
+.item_form0{
+  font-size: 10px;
+}
+
+.kamoku_insert_link{
+	display: inline-block;
+}
+
+.course_insert_tt{
+	font-size: 10px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 14%;
+  padding: 4px;
+  margin-top: 5px;
+	margin-right: 10%;
+  background-color: rgb(29, 161, 242);
+  float: right;
+}
+
+.course_search_insert{
+  margin-top: 10px;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+.tt_select_edit{
+  font-size: 30px;
+  margin-left: 10px;
+  width: 180px;
+  text-align: center;
+}
+
+.tt_edit_name{
+  font-size: 80px;
+  display: inline-block;
+}
+
+.kamoku_insert{
+  font-size: 10px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.edit_header{
+  width: ;
+  margin-left: 5%;
+}
+
+.tt_edit_top{
+  font-size: 20px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.edit_page{
+	border-bottom: dotted;
+	width: 90%;
+	margin: 30px auto;
+}
+
+.tt_name_edit{
+  display: inline-block;
+	float: right;
+	margin-right: 10%;
+}
+
+.tt_name_edit1{
+  font-size: 8px;
+}
+
+.tt_name_insert{
+  display: inline-block;
+	float: right;
+	margin-right: 2%;
+}
+
+.tt_name_insert1{
+  font-size: 8px;
+}
+
+.tt_edit1{
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.edit_btn{
+  font-weight: bold;
+  font-size: 5px;
+}
+
+.insert_edit{
+  margin-left: 5%;
+}
+
+.tt_edit_form {
+	position: relative;
+	width: 80%;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 15px;
+}
+
+.tt_edit_form input[type='text'] {
+	font: 15px/30px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding-left: 5px;
+	letter-spacing: 1px;
+	border: 0;
+}
+
+.tt_edit_form input[type='text']:focus {
+	outline: none;
+}
+
+.tt_edit_form input[type='text']:focus::after {
+	outline: none;
+}
+
+.tt_edit_form::after {
+	display: block;
+	width: 100%;
+	height: 4px;
+	margin-top: -1px;
+	content: '';
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: #da3c41;
+}
+
+.tt_edit_comp{
+	font-size: 15px;
+  margin: 5px auto;
+	width: 80%;
+	text-align: center;
+}
+
+.back{
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 10%;
+  padding: 20px;
+  margin: 0 555px 0 20px;
+  background-color: rgb(29, 161, 242);
+}
+
+.back1{
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 10%;
+  padding: 20px;
+  margin: 0 490px 0 90px;
+  background-color: rgb(29, 161, 242);
+}
+
+.back2{
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 10%;
+  padding: 20px;
+  margin-left: 80%;
+  background-color: rgb(29, 161, 242);
+}
+
+.back3{
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 10%;
+  padding: 20px;
+  margin-left: 85%;
+  background-color: rgb(29, 161, 242);
+}
+
+.back4{
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 10%;
+  padding: 20px;
+  margin-left: 5%;
+  background-color: rgb(29, 161, 242);
+}
+
+.back5{
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 20%;
+  padding: 10px;
+	margin-top: 30px;
+  margin-left: 9%;
+	margin-right: 0px;
+  background-color: rgb(29, 161, 242);
+}
+
+.tt_chenge{
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 20%;
+  padding: 10px;
+  margin-top: 50px;
+  background-color: rgb(29, 161, 242);
+}
+
+.tt_chenge1{
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+  border-radius: 80px;
+  width: 20%;
+  padding: 10px;
+  margin-top: 50px;
+  background-color: rgb(29, 161, 242);
+}
+
+.edit_account{
+  font-size: 50px;
+  margin-left: 5px;
+}
+
+.account_edit_comp{
+  font-size: 20px;
+  text-align: center;
+}
+
+.newtt_comp{
+  font-size: 15px;
+  margin: 5px auto;
+	width: 80%;
+	text-align: center;
+}
+/* 科目掲示板画面 */
+
+.bbs_name{
+  font-size: 20px;
+}
+
+.textarea{
+  margin-left: 2.5%;
+  margin-top: 5px;
+}
+
+.bbs_comment{
+  width: 90%;
+  font-size: 10px;
+  text-align: center;
+	margin: 5px auto;
+}
+
+.bbs_post{
+	/* width: 90%; */
+  text-align: left;
+  padding-bottom: 5px;
+  border-bottom: 0.5px solid;
+}
+
+.post_form{
+	border-bottom: dotted;
+	border-width: 0.5px;
+	margin: 5px auto;
+	width: 90%;
+}
+
+.comment{
+  margin-left: 5px;
+}
+
+.bbs_name_post{
+  width: 10%;
+  font-size: 10px;
+  margin-left: 2.5%;
+}
+
+.post_btn{
+  font-size: 8px;
+	margin-bottom: 5px;
+}
+
+/* ユーザー検索画面 */
+.user_search_top{
+  font-size: 20px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.items1{
+  border-style: solid;
+	border-width: 1px;
+  font-size: 10px;
+  margin-top: 5px;
+  width: 70% ;
+  margin-left: 5%;
+}
+
+.user_search_btn{
+	font-size: 10px;
+	font-weight: 400;
+	color: white;
+	border-radius: 80px;
+	width: 14%;
+	padding: 4px;
+	margin: 5px 0 0 60%;
+	background-color: rgb(29, 161, 242);
+}
+
+.user_search{
+  font-size: 15px;
+  margin-left: 5%;
+  border-bottom: solid;
+	border-width: 1px;
+  width: 30%;
+}
+
+.user_form{
+	font-size: 10px;
+	margin: auto 0 ;
+}
+
+.users{
+  margin-top: 10px;
+  font-size: 10px;
+  margin-left: 5%;
+}
+
+.no_users{
+  margin-top: 10px;
+  font-size: 40px;
+  margin-left: 5%;
+}
+
+/* ユーザーページ */
+
+.userpage_top{
+  font-size: 15px;
+  display: inline-block;
+}
+
+.userpage_tt_select{
+	font-size: 8px;
+  width: 80px;
+  text-align: center;
+	/* margin-bottom: 10px; */
+}
+
+.userpage_tt_btn{
+  font-size: 6px;
+}
